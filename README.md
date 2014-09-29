@@ -1,4 +1,20 @@
-hexo-generator-baidu-sitemap
-============================
+# Sitemap generator
 
-Baidu Sitemap generator plugin for Hexo
+Generate sitemap.
+
+## Install
+
+``` bash
+$ npm install hexo-generator-baidu-sitemap --save
+```
+
+## Options
+
+You can configure this plugin in `_config.yml`.
+
+``` yaml
+baidusitemap:
+    path: baidusitemap.xml
+```
+
+- **path** - Sitemap path. (Default: baidusitemap.xml)
