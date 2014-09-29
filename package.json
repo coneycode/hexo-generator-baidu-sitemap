@@ -1,6 +1,6 @@
 {
-  "name": "hexo-generator-sitemap",
-  "version": "0.1.0",
+  "name": "hexo-generator-baidu-sitemap",
+  "version": "0.0.4",
   "description": "Baidu Sitemap generator plugin for Hexo",
   "main": "index",
   "repository": {
@@ -14,7 +14,7 @@
     "hexo",
     "sitemap",
     "seo",
-    "generator"
+    "generator",
     "baidu"
   ],
   "author": "Coney Geng <coneylife@gmail.com> (http://gengbiao.me)",
