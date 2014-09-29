@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% posts.forEach(function(post){ %>
+  <url>
+    <loc><%- encodeURI(post.permalink) %></loc>
+    <lastmod><%= post.updated.toDate().toISOString() || post.date.toDate().toISOString() %></lastmod>
+    <data>
+        <display>
+        <title><%-: post.title | cdata %></title>
+        <description><%-: post.description | cdata %></description>
+        <content type="html"><%-: post.content | cdata %></content>
+        <pubTime><%= post.date.toDate().toISOString() %></pubTime>
+         <% [].concat(post.tags.toArray()).forEach(function(tag){ %>
+             <tag><%= tag.name %> </tag>
+         <% }) %>
+         <% if (post.excerpt){ %><summary type="html"><%-: post.excerpt | cdata %></summary><% } %>
+         <% [].concat(post.tags.toArray(),post.categories.toArray()).forEach(function(category){ %> }
+              <category term="<%= category.name %>" scheme="<%- encodeURI(category.permalink) %>"/>
+          <% }) %>
+        </display>
+    </data>
+    </url>
+  <% }) %>
+</urlset>
