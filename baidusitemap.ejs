@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<% posts.forEach(function(post){ %>
+    <% if(post.categories){%>
+  <url>
+    <loc><%- encodeURI(post.permalink) %></loc>
+    <lastmod><%= post.updated.toDate().toISOString() || post.date.toDate().toISOString() %></lastmod>
+    <data>
+        <display>
+        <title><%-: post.title %></title>
+        <content><%-: post.content | cdata %></content>
+        <pubTime><%= post.date.toDate().toISOString() %></pubTime>
+        <%/*if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
+             <tag><%= tag.name %> </tag>
+         <% })}*/ %>
+         <%if(post.tags && post.categories){ [].concat(post.tags.toArray(),post.categories.toArray()).forEach(function(category){ %>
+              <breadCrumb title="<%= category.name %>" url="<%- encodeURI(category.permalink) %>"/>
+          <%})} %>
+        </display>
+    </data>
+    </url>
+<%}}) %>
+</urlset>
