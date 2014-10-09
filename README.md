@@ -10,8 +10,9 @@ $ npm install hexo-generator-baidu-sitemap --save
 
 ## Update
 
+if you install with --save, you must remove firstly when you update it.
 ``` bash
-$ npm remove hexo-generator-baidu-sitemap --save
+$ npm remove hexo-generator-baidu-sitemap
 $ npm install hexo-generator-baidu-sitemap --save
 ```
 
