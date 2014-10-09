@@ -8,6 +8,13 @@ Generate sitemap.
 $ npm install hexo-generator-baidu-sitemap --save
 ```
 
+## Update
+
+``` bash
+$ npm remove hexo-generator-baidu-sitemap --save
+$ npm install hexo-generator-baidu-sitemap --save
+```
+
 ## Options
 
 You can configure this plugin in `_config.yml`.
