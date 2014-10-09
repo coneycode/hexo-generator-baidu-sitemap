@@ -8,11 +8,12 @@
     <data>
         <display>
         <title><%-: post.title %></title>
-        <content><%-: post.content | cdata %></content>
         <pubTime><%= post.date.toDate().toISOString() %></pubTime>
         <%/*if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
              <tag><%= tag.name %> </tag>
-         <% })}*/ %>
+         <% })}%>
+         <content><%-: post.content | cdata %></content>
+         <% */ %>
          <%if(post.tags && post.categories){ [].concat(post.tags.toArray(),post.categories.toArray()).forEach(function(category){ %>
               <breadCrumb title="<%= category.name %>" url="<%- encodeURI(category.permalink) %>"/>
           <%})} %>
