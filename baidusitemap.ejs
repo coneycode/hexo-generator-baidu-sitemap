@@ -9,14 +9,16 @@
         <display>
         <title><%-: post.title %></title>
         <pubTime><%= post.date.toDate().toISOString() %></pubTime>
-        <%/*if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
-             <tag><%= tag.name %> </tag>
+        <%if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
+        <tag><%= tag.name %> </tag>
          <% })}%>
          <content><%-: post.content | cdata %></content>
-         <% */ %>
-         <%if(post.tags && post.categories){ [].concat(post.tags.toArray(),post.categories.toArray()).forEach(function(category){ %>
+         <% %>
+         <%if(post.tags && post.categories){ %>
+           <% post.categories.toArray().forEach(function(category,index){ %>
+             <%  if(index < 3){ %>
               <breadCrumb title="<%= category.name %>" url="<%- encodeURI(category.permalink) %>"/>
-          <%})} %>
+          <%}})} %>
         </display>
     </data>
     </url>
