@@ -11,9 +11,9 @@
         <pubTime><%= post.date.toDate().toISOString() %></pubTime>
         <%if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
         <tag><%= tag.name %> </tag>
-         <% })}%>
-         <content><%-: post.content | cdata %></content>
-         <% %>
+         <% })}/*%>
+         <content><%-: post.content%></content>
+         <% */%>
          <%if(post.tags && post.categories){ %>
            <% post.categories.toArray().forEach(function(category,index){ %>
              <%  if(index < 3){ %>

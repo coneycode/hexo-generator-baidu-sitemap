@@ -1,7 +1,12 @@
-var generator = hexo.extend.generator;
+var merge = require('utils-merge');
+var pathFn = require('path');
 
-if (generator.register.length === 1){
-  generator.register(require('./baidusitemap'));
-} else {
-  generator.register('baidusitemap', require('./baidusitemap'));
+var config = hexo.config.baidusitemap = merge({
+  path: 'baidusitemap.xml'
+}, hexo.config.sitemap);
+
+if (!pathFn.extname(config.path)){
+  config.path += '.xml';
 }
+
+hexo.extend.generator.register('baidusitemap', require('./lib/generator'));
