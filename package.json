@@ -23,8 +23,9 @@
     "url": "https://github.com/coneycode/hexo-generator-baidu-sitemap/LICENSE"
   },
   "dependencies": {
-    "hexo": "^3.0.0",
     "ejs": "^1.0.0",
+    "hexo": "^3.0.0",
+    "hexo-generator-baidu-sitemap": "0.0.8",
     "utils-merge": "^1.0.0"
   }
 }
