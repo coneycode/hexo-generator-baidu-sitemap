@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<% var url = config.url + config.root %>
 <% posts.forEach(function(post){ %>
     <% if(post.categories){%>
   <url>
-    <loc><%- encodeURI(post.permalink) %></loc>
+    <loc><%- encodeURI(url + post.path) %></loc>
     <lastmod><%= post.updated.toDate().toISOString() || post.date.toDate().toISOString() %></lastmod>
     <data>
         <display>
         <title><%-: post.title %></title>
         <pubTime><%= post.date.toDate().toISOString() %></pubTime>
         <%if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
-        <tag><%= tag.name %> </tag>
+        <tag><%= tag.name %></tag>
          <% })}/*%>
          <content><%-: post.content%></content>
          <% */%>
          <%if(post.tags && post.categories){ %>
            <% post.categories.toArray().forEach(function(category,index){ %>
              <%  if(index < 3){ %>
-              <breadCrumb title="<%= category.name %>" url="<%- encodeURI(category.permalink) %>"/>
+              <breadCrumb title="<%= category.name %>" url="<%- encodeURI(url + category.path) %>"/>
           <%}})} %>
         </display>
     </data>
