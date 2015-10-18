@@ -23,13 +23,17 @@ $ npm install hexo-generator-baidu-sitemap --save
 
 ## Options
 
-You can configure this plugin in `_config.yml`.
+if your hexo version is 2.x.x, you can configure this plugin in `_config.yml`.
 
 ``` yaml
 baidusitemap:
     path: baidusitemap.xml
 ```
-
+if version is 3.x.x, you should configure this plugin in `_config.yml`.
+``` yaml
+baidusitemap:
+path: baidusitemap.xml
+```
 - **path** - Sitemap path. (Default: baidusitemap.xml)
 
 ##Errors
