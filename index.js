@@ -3,7 +3,7 @@ var pathFn = require('path');
 
 var config = hexo.config.baidusitemap = merge({
   path: 'baidusitemap.xml'
-}, hexo.config.sitemap);
+}, hexo.config.baidusitemap);
 
 if (!pathFn.extname(config.path)){
   config.path += '.xml';
