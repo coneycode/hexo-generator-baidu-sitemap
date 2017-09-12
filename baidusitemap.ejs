@@ -6,22 +6,6 @@
   <url>
     <loc><%- encodeURI(url + post.path) %></loc>
     <lastmod><%= post.updated.toDate().toISOString() || post.date.toDate().toISOString() %></lastmod>
-    <data>
-        <display>
-        <title><%-: post.title %></title>
-        <pubTime><%= post.date.toDate().toISOString() %></pubTime>
-        <%if(post.tags){ post.tags.toArray().forEach(function(tag){ %>
-        <tag><%= tag.name %></tag>
-         <% })}/*%>
-         <content><%-: post.content%></content>
-         <% */%>
-         <%if(post.tags && post.categories){ %>
-           <% post.categories.toArray().forEach(function(category,index){ %>
-             <%  if(index < 3){ %>
-              <breadCrumb title="<%= category.name %>" url="<%- encodeURI(url + category.path) %>"/>
-          <%}})} %>
-        </display>
-    </data>
     </url>
 <%}}) %>
 </urlset>
