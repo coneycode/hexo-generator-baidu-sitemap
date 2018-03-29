@@ -36,7 +36,7 @@ path: baidusitemap.xml
 ```
 - **path** - Sitemap path. (Default: baidusitemap.xml)
 
-##Errors
+## Errors
 
 Maybe response is "hexo is not definded",then you should:
 ``` bash
