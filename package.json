@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-baidu-sitemap",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Baidu Sitemap generator plugin for Hexo",
   "main": "index",
   "repository": {
@@ -23,9 +23,8 @@
     "url": "https://github.com/coneycode/hexo-generator-baidu-sitemap/LICENSE"
   },
   "dependencies": {
-    "ejs": "^1.0.0",
+    "ejs": "^2.5.5",
     "hexo": "^3.0.0",
-    "hexo-generator-baidu-sitemap": "0.0.8",
     "utils-merge": "^1.0.0"
   }
 }

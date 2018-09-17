@@ -12,7 +12,7 @@ $ npm install hexo-generator-baidu-sitemap@0.0.8 --save
 ```
 if version is 3.x.x, you should install as follow:
 ``` bash
-$ npm install hexo-generator-baidu-sitemap@0.1.1 --save
+$ npm install hexo-generator-baidu-sitemap@0.1.4 --save
 ```
 
 ## Update.
