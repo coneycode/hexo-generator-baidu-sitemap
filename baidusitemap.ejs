@@ -12,6 +12,6 @@
   if(post.categories){
 %>  <url>
     <loc><%- encodeURI(url + post.path) %></loc>
-    <lastmod><%= post.updated.toDate().toISOString() || post.date.toDate().toISOString() %></lastmod>
+    <lastmod><%= post.updated.toDate().toISOString().replace(/T.*$/i, "") || post.date.toDate().toISOString().replace(/T.*$/i, "") %></lastmod>
   </url><%}}) %>
 </urlset>
