@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-baidu-sitemaps",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Baidu Sitemap generator plugin for Hexo",
   "main": "index",
   "repository": {
