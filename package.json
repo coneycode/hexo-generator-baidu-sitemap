@@ -5,10 +5,10 @@
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fnoopv/hexo-generator-baidu-sitemaps.git"
+    "url": "https://github.com/coneycode/hexo-generator-baidu-sitemaps.git"
   },
   "bugs": {
-    "url": "https://github.com/fnoopv/hexo-generator-baidu-sitemaps/issues"
+    "url": "https://github.com/coneycode/hexo-generator-baidu-sitemaps/issues"
   },
   "keywords": [
     "hexo",
