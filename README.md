@@ -29,7 +29,8 @@
  $ npm install hexo-generator-baidu-sitemap --save
  ```
 
- @@ -29,18 +42,23 @@ if your hexo version is 2.x.x, you can configure this plugin in `_config.yml`.
+ if your hexo version is 2.x.x, you can configure this plugin in `_config.yml`.
+ 
  baidusitemap:
      path: baidusitemap.xml
  ```
