@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <%
+var ismobile = config.baidusitemap.mobiletype && config.baidusitemap.mobiletype !== '' && config.baidusitemap.mobiletype.toLowerCase() !== 'pc'
+%><?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" <% if(ismobile) { %>
+        xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/" <% }%>>
+  <%
   var baiduUrl = config.url
 
   if (config.baidusitemap.url) {
@@ -10,9 +13,10 @@
   var url = baiduUrl + config.root;
   posts.forEach(function(post){
   if(post.categories){ -%>
-  <url>
-    <loc><%- encodeURI(url + post.path) %></loc>
-    <lastmod><%= post.updated.toDate().toISOString().replace(/T.*$/i, "") || post.date.toDate().toISOString().replace(/T.*$/i, "") %></lastmod>
-  </url>
-<%}}) -%>
+    <url>
+      <loc><%- encodeURI(url + post.path) %></loc> <% if(ismobile) { %>
+        <mobile:mobile type="<%- config.baidusitemap.mobiletype %>"/> <% }%>
+      <lastmod><%= post.updated.toDate().toISOString().replace(/T.*$/i, "") || post.date.toDate().toISOString().replace(/T.*$/i, "") %></lastmod>
+    </url>
+  <%}}) -%>
 </urlset> -%>

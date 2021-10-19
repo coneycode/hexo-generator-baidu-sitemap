@@ -33,18 +33,19 @@
  
  baidusitemap:
      path: baidusitemap.xml
+     mobiletype: 'pc,mobile'
  ```
 
  if version is 3.x.x, you should configure this plugin in `_config.yml`.
 
  ``` yaml
  baidusitemap:
- path: baidusitemap.xml
-
+      path: baidusitemap.xml
+      mobiletype: 'pc,mobile'
  ```
 
  - **path** - Sitemap path. (Default: baidusitemap.xml)
-
+ - **mobiletype** - [参见百度移动Sitemap协议](https://www.baidu.com/schemas/sitemap-mobile/1/) ,mobile: 移动网页, pc,mobile: 自适应网页, htmladapt: 代码适配, pc(或无值):PC网页
  ## Errors
 
  Maybe response is "hexo is not definded",then you should:
